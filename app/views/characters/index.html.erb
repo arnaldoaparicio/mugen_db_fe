@@ -1,0 +1,5 @@
+hello
+
+<% @characters.each do |character| %>
+    <p> <%= link_to character.name, "/characters/#{character.id}" %> </p>
+<% end %>
