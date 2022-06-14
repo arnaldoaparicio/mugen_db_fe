@@ -1,0 +1,5 @@
+this is foo 
+
+<% @fighters.each do |fighter| %>
+    <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}"%>
+<% end %>
