@@ -12,10 +12,10 @@ class CharactersController < ApplicationController
   end
 
   def show
-      response = connection.get("/api/v1/characters/#{params[:id]}")
-      json = JSON.parse(response.body, symbolize_names: true)
-      @fighters = json[:data].map do |fighter_data|
-        Fighter.new(fighter_data)
+    response = connection.get("/api/v1/characters/#{params[:id]}")
+    json = JSON.parse(response.body, symbolize_names: true)
+    @fighters = json[:data].map do |fighter_data|
+      Fighter.new(fighter_data)
     end
   end
 end
