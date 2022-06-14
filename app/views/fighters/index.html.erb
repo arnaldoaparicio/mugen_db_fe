@@ -1,1 +1,7 @@
-hello moto
+<% @fighter_variants.each do |variant| %>
+    <p> Name: <%= variant.name %></p>
+       <p> Author: <%= variant.author %> </p>
+        <p> Website: <%= variant.website %> </p>
+       <p> Origin: <%= variant.game_name %> </p>
+       <p> Image: <%= variant.image %> </p>
+<% end %>
