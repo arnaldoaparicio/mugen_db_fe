@@ -1,7 +1,11 @@
-<% @fighter_variants.each do |variant| %>
-    <p> Name: <%= variant.name %></p>
-       <p> Author: <%= variant.author %> </p>
+<% if @fighter_variants.empty? %>
+    <p> Hello, this section is empty. Something will be here soon. </p>
+<% else %>
+    <% @fighter_variants.each do |variant| %>
+        <p> Name: <%= variant.name %></p>
+        <p> Author: <%= variant.author %> </p>
         <p> Website: <%= variant.website %> </p>
-       <p> Origin: <%= variant.game_name %> </p>
-       <p> Image: <%= variant.image %> </p>
+        <p> Origin: <%= variant.game_name %> </p>
+        <p> Image: <%= variant.image %> </p>
+    <% end %>
 <% end %>
