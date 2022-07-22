@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get '/characters', to: 'characters#index'
   get '/characters/:id', to: 'characters#show'
   get '/characters/:id/:fighter_id', to: 'fighters#index'
+  get '/characters/:id/:fighter_id/new', to: 'fighter_variants#new'
 
 end
