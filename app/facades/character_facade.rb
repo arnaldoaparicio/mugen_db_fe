@@ -6,8 +6,8 @@ class CharacterFacade
     end
   end
 
-  def self.fighters
-    json = CharacterService.all_fighters
+  def self.fighters(character_id)
+    json = CharacterService.all_fighters(character_id)
     @fighters = json[:data].map do |fighter_data|
       Fighter.new(fighter_data)
     end
