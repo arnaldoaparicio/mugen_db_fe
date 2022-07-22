@@ -5,4 +5,11 @@ class CharacterFacade
       Character.new(character_data)
     end
   end
+
+  def self.fighters
+    json = CharacterService.all_fighters
+    @fighters = json[:data].map do |fighter_data|
+      Fighter.new(fighter_data)
+    end
+  end
 end
