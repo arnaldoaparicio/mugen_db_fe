@@ -9,7 +9,5 @@ class CharactersController < ApplicationController
 
   def show
     @fighters = CharacterFacade.fighters(params[:id])
-
-
   end
 end
