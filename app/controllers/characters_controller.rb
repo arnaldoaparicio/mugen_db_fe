@@ -4,11 +4,7 @@ class CharactersController < ApplicationController
   end
 
   def index
-    response = connection.get('/api/v1/characters')
-    json = JSON.parse(response.body, symbolize_names: true)
-    @characters = json[:data].map do |character_data|
-      Character.new(character_data)
-    end
+    @characters = CharacterFacade.origins
   end
 
   def show
