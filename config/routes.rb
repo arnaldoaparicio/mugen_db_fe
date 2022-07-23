@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/characters/:id/:fighter_id', to: 'fighters#index'
   get '/characters/:id/:fighter_id/new', to: 'fighter_variants#new'
 
+  post '/fighter_variants', to: 'fighter_variants#create'
+
 end
