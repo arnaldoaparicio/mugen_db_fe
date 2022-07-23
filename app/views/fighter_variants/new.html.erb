@@ -13,5 +13,11 @@
   <%= f.label :game_name, 'Origin' %>
   <%= f.text_field :game_name %>
 
+  <%= f.hidden_field :id %>
+  <%= hidden_field_tag :id, "#{params[:id]}" %>
+
+  <%= f.hidden_field :fighter_id %>
+  <%= hidden_field_tag :fighter_id, "#{params[:fighter_id]}" %>
+
   <%= f.submit 'Submit' %>
 <% end %>
