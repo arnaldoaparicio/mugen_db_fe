@@ -1,6 +1,6 @@
 <h2>Submit a new entry</h2>
 
-<%= form_with url: '/fighter_variants', local: true do |f| %>
+<%= form_with url: '/fighter_variants', method: :post, multipart: true, local: true do |f| %>
   <%= f.label :name, 'Name' %>
   <%= f.text_field :name %>
 
@@ -12,6 +12,12 @@
 
   <%= f.label :game_name, 'Origin' %>
   <%= f.text_field :game_name %>
+
+  <%= f.label :image, 'Image' %>
+  <%= f.text_field :image %>
+
+  <%= f.label :avatar %>
+  <%= f.file_field :avatar, accept: 'image/*', direct_upload: false %>
 
   <%= f.hidden_field :id %>
   <%= hidden_field_tag :id, "#{params[:id]}" %>
