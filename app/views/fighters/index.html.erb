@@ -2,11 +2,11 @@
     <p> Hello, this section is empty. Something will be here soon. </p>
 <% else %>
     <% @fighter_variants.each do |variant| %>
+    <p> <img src= <%= url_for(variant.image_url) %> > </p>
         <p> Name: <%= variant.name %></p>
         <p> Author: <%= variant.author %> </p>
         <p> Website: <%= variant.website %> </p>
         <p> Origin: <%= variant.game_name %> </p>
-        <p> <img src= <%= url_for(variant.image_url) %> > </p>
     <% end %>
 <% end %>
 
