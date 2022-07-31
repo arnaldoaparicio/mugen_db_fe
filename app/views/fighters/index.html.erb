@@ -6,7 +6,7 @@
         <p> Author: <%= variant.author %> </p>
         <p> Website: <%= variant.website %> </p>
         <p> Origin: <%= variant.game_name %> </p>
-        <p> <img src= <%= variant.image %> > </p>
+        <p> <img src= <%= url_for(variant.image_url) %> > </p>
     <% end %>
 <% end %>
 
