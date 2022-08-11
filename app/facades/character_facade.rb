@@ -12,4 +12,9 @@ class CharacterFacade
       Fighter.new(fighter_data)
     end
   end
+
+  def self.create_character(character)
+    character = CharacterService.create_new_character(character)[:data]
+    Character.new(character)
+  end
 end
