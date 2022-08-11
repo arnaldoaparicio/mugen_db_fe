@@ -3,3 +3,5 @@ hello
 <% @characters.each do |character| %>
     <p> <%= link_to character.name, "/characters/#{character.id}" %> </p>
 <% end %>
+
+<%= link_to 'Add new origin entry', '/characters/new' %>
