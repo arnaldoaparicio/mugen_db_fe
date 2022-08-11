@@ -9,6 +9,13 @@ class CharacterService
     json = JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.create_new_character(character)
+    response = connection.post('/api/v1/characters', character) do |req|
+      req.body = { character: character }
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.connection
     Faraday.new(url: 'http://localhost:5000')
   end
