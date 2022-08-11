@@ -1,6 +1,6 @@
 class FighterVariantService
   def self.connection
-    Faraday.new(url: 'http://localhost:5000') do |f|
+    Faraday.new(url: 'https://boiling-peak-48685.herokuapp.com') do |f|
       f.request :multipart
       f.request :url_encoded
       f.adapter :net_http
