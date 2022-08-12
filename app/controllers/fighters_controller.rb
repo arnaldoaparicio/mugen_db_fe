@@ -11,6 +11,7 @@ class FightersController < ApplicationController
   end
 
   def create
+    # binding.pry
     fighter = FighterFacade.create_fighter(name: params[:name], character_id: params[:character_id])
     redirect_to "/characters/#{params[:character_id]}"
   end
