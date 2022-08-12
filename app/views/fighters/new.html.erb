@@ -5,7 +5,7 @@
     <%= f.text_field :name %>
 
     <%= f.hidden_field :character_id %>
-    <%= hidden_field_tag :character_id, "#{params[:character_id]}" %>
-
+    <%= hidden_field_tag :character_id, "#{params[:id]}" %>
+    
     <%= f.submit 'Submit' %>
 <% end %>
