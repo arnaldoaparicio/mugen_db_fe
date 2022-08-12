@@ -5,4 +5,9 @@ class FighterFacade
       FighterVariant.new(variant_data)
     end
   end
+
+  def self.create_fighter(data)
+    fighter = FighterService.create_new_fighter(data)[:data]
+    Fighter.new(fighter)
+  end
 end
