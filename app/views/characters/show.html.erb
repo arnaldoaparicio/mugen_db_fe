@@ -1,5 +1,7 @@
 this is foo 
 
 <% @fighters.each do |fighter| %>
-    <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}"%>
+    <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %>
 <% end %>
+
+<%= link_to 'Add a new fighter', "/characters/#{params[:id]}/new" %>
