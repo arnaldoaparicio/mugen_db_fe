@@ -9,4 +9,12 @@ class FightersController < ApplicationController
     @fighter_variants = FighterFacade.variants(params[:id], params[:fighter_id])
     @character = CharacterFacade.origins
   end
+
+  def create
+    fighter = FighterFacade.create_fighter(name: params[:name], character_id: params[:character_id])
+    redirect_to "/characters/#{params[:character_id]}"
+  end
+
+  def new 
+  end
 end
