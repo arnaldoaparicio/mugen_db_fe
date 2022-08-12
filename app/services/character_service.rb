@@ -17,6 +17,7 @@ class CharacterService
   end
 
   def self.connection
-    Faraday.new(url: 'https://boiling-peak-48685.herokuapp.com')
+    # Faraday.new(url: 'https://boiling-peak-48685.herokuapp.com')
+    Faraday.new(url: 'http://localhost:5000')
   end
 end
