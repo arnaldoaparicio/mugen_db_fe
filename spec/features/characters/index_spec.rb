@@ -3,23 +3,20 @@ require 'rails_helper'
 RSpec.describe 'characters/index', type: :feature do
   it 'has some character origins' do
     visit('/characters')
-    expect(page).to have_content("Arcana Heart")
-    expect(page).to have_content('Marvel vs Series/X-COTA')
-    expect(page).to have_content('Street Fighter 3')
-    expect(page).to have_content('Capcom Fighting Evolution')
-    expect(page).to have_content('Darkstalkers/Vampire Savior')
-    expect(page).to have_content("JoJo's Bizarre Adventure")
-    expect(page).to have_content('The King of Fighters')
-    expect(page).to have_content('Street Fighter Alpha')
+    save_and_open_page
+    binding.pry
+    expect(page).to have_content('The Fallen Angel')
+    expect(page).to have_content('Capcom vs. SNK Series')
   end
 
   it 'shows the characters within the Darkstalkers/Vampire Savior character origin page' do
     visit('/characters')
 
-    click_link 'Darkstalkers/Vampire Savior'
+    click_link 'Capcom vs. SNK Series'
 
-    expect(page).to have_content('Lilith')
-    expect(page).to have_content('Jedah')
+    expect(page).to have_content('Ryu')
+    expect(page).to have_content('Kyo')
+    expect(page).to have_content('Guile')
     expect(page).to have_link('Add a new fighter')
   end
 end
