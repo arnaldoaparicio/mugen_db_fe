@@ -2,7 +2,7 @@ name: CI
 on: [push, pull_request]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macOS-11
     services: 
       db:
         image: postgres:14
@@ -22,9 +22,6 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.7.2
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install
     - name: Build and run tests
       env:
         DATABASE_URL: postgres://postgres:@localhost:5432/test
