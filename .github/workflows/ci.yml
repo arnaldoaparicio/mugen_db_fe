@@ -5,7 +5,7 @@ jobs:
     runs-on: macOS-11
     services: 
       db:
-        image: postgres:4
+        image: postgres:14
         ports: ['5432:5432']
         options: >-
           --health-cmd pg_isready
