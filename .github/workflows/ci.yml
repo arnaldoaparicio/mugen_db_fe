@@ -11,6 +11,7 @@ jobs:
           POSTGRES_DB: postgres
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
+          POSTGRES_HOST: localhost
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -29,7 +30,6 @@ jobs:
     - name: Build and run tests
       env:
         RAILS_ENV: test
-        PG_HOST: localhost
         DATABASE_NAME_TEST: mugen_fe_test
         RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
       run: |
