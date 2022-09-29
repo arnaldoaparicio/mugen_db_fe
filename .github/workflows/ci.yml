@@ -28,7 +28,6 @@ jobs:
       with:
         cmd: install
     - name: Build and run tests
-      run: node client.js
       env:
         RAILS_ENV: test
         POSTGRES_HOST: localhost
