@@ -12,7 +12,6 @@ jobs:
           POSTGRES_DB: postgres
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_HOST: postgres
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -29,15 +28,16 @@ jobs:
       with:
         cmd: install
     - name: Build and run tests
+      run: node client.js
       env:
         RAILS_ENV: test
-        PG_USER: postgres
-        PG_HOST: localhost
+        POSTGRES_HOST: localhost
+        POSGRES_PORT: 5432
         PG_DATABASE: postgres
         PG_PASSWORD: postgres
-        PG_PORT: 5432
         RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
       run: |
+        sudo apt-get -yqq install libpq-dev
         gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rails db:create
