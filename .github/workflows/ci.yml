@@ -30,7 +30,11 @@ jobs:
     - name: Build and run tests
       env:
         RAILS_ENV: test
-        DATABASE_NAME_TEST: mugen_fe_test
+        PG_USER: postgres
+        PG_HOST: localhost
+        PG_DATABASE: postgres
+        PG_PASSWORD: postgres
+        PG_PORT: 5432
         RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
       run: |
         sudo apt-get -yqq install libpq-dev
