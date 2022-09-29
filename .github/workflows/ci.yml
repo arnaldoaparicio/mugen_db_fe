@@ -14,10 +14,6 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-      redis:
-        image: redis
-        ports: ['6379:6379']
-        options: --entrypoint redis-server
     steps:
     - uses: actions/checkout@v1
     - name: Setup Ruby
@@ -30,8 +26,8 @@ jobs:
         cmd: install
     - name: Build and run tests
       env:
-        DATABASE_URL: postgres://postgres:@localhost:5432/test
-        REDIS_URL: redis://localhost:6379/0
+        PG_DATABASE: postgres
+        PG_HOST: localhost
         RAILS_ENV: test
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: postgres
@@ -40,7 +36,7 @@ jobs:
         sudo apt-get -yqq install libpq-dev
         gem install bundler
         bundle install --jobs 4 --retry 3
-        bundle exec rake db:migrate
+        bundle exec rails db:schema:load --trace
         bundle exec rails test
 
 
