@@ -59,6 +59,7 @@ test:
   <<: *default
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: mugen_db_fe_test
   username: mugen_db_fe
   password: <%= ENV['MUGEN_DB_FE_DATABASE_PASSWORD'] %>
