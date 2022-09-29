@@ -33,8 +33,9 @@ jobs:
         DATABASE_NAME_TEST: mugen_fe_test
         RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
       run: |
-        sudo apt-get -yqq install libpq-dev
+        sudo apt-get install postgresql libpq-dev
         sudo service postgresql start
+        sudo -u postgres createuser --superuser "$USER
         gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rails db:setup
