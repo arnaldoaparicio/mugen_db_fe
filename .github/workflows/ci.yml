@@ -35,11 +35,8 @@ jobs:
       run: |
         sudo apt-get install postgresql libpq-dev
         sudo service postgresql start
-        sudo -u postgres createuser --superuser "$USER
+        sudo -u postgres createuser --superuser "$USER"
         pg_ctlcluster 12 main start
-        cat > configuration.json <<EOF
-        ${{ secrets.CONFIGURATION }}
-        EOF
         gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rails db:setup
