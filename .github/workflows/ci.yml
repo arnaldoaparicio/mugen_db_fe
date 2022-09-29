@@ -7,8 +7,6 @@ jobs:
       db:
         image: postgres:14
         ports: ['5432:5432']
-        env:
-          POSTGRES_PASSWORD: postgres
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -41,7 +39,7 @@ jobs:
         brew services start postgresql
         gem install bundler
         bundle install --jobs 4 --retry 3
-        bundle exec rails db:setup
+        bundle exec rails db:schema:load --trace
         bundle exec rails test
 
 
