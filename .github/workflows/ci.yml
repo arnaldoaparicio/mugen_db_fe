@@ -27,19 +27,19 @@ jobs:
       with:
         cmd: install
     - name: Build and run tests
-        env:
-          RAILS_ENV: test
-          PG_HOST: localhost
-          DATABASE_NAME_TEST: mugen_fe_test
-          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
-        run: |
-          sudo apt-get -yqq install libpq-dev
-          sudo service postgresql start
-          gem install bundler
-          bundle install --jobs 4 --retry 3
-          bundle exec rails db:setup
-          bundle exec rails db:migrate
-          bundle exec rails test
+      env:
+        RAILS_ENV: test
+        PG_HOST: localhost
+        DATABASE_NAME_TEST: mugen_fe_test
+        RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+      run: |
+        sudo apt-get -yqq install libpq-dev
+        sudo service postgresql start
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rails db:setup
+        bundle exec rails db:migrate
+        bundle exec rails test
 
 
       
