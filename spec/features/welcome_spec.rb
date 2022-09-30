@@ -11,7 +11,7 @@ RSpec.describe 'welcome/index', type: :feature do
     expect(page).to have_link('Characters')
   end
 
-  it 'clicks on the Characters link' do
+  it 'clicks on the Characters link', :vcr do
     visit('/')
     click_link('Characters')
     expect(current_path).to eq('/characters')
