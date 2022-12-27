@@ -81,6 +81,10 @@ test:
 #
 production:
   <<: *default
-  database: mugen_db_fe_production
-  username: mugen_db_fe
-  password: <%= ENV['MUGEN_DB_FE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
+
+  # database: mugen_db_fe_production
+  # username: mugen_db_fe
+  # password: <%= ENV['MUGEN_DB_FE_DATABASE_PASSWORD'] %>
