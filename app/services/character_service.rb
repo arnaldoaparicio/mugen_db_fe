@@ -18,6 +18,6 @@ class CharacterService
 
   def self.connection
     Faraday.new(url: 'https://mugen-db-be.fly.dev')
-    # Faraday.new(url: 'http://localhost:5000')
+    # Faraday.new(url: 'http://localhost:3000')
   end
 end

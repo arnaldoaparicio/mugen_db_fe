@@ -6,7 +6,7 @@ class FighterService
 
   def self.connection
     Faraday.new(url: 'https://mugen-db-be.fly.dev')
-    # Faraday.new(url: 'http://localhost:5000')
+    # Faraday.new(url: 'http://localhost:3000')
   end
 
   def self.create_new_fighter(fighter)
