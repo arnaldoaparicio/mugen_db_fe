@@ -1,5 +1,4 @@
-characters 
-
+All characters in <%= @origin.name %>
 <% @fighters.each do |fighter| %>
     <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %></p>
 <% end %>
