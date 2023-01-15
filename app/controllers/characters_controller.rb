@@ -5,6 +5,9 @@ class CharactersController < ApplicationController
 
   def show
     @fighters = CharacterFacade.fighters(params[:id])
+
+    all_origins = CharacterFacade.origins
+    @origin = all_origins.find {|origin| origin.id == params[:id]}
   end
 
   def create
