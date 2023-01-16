@@ -1,7 +1,7 @@
 class FighterVariantService
   def self.connection
     Faraday.new(url: 'https://mugen-db-be.fly.dev') do |f|
-    # Faraday.new(url: 'http://localhost:5000') do |f|
+    # Faraday.new(url: 'http://localhost:3000') do |f|
       f.request :multipart
       f.request :url_encoded
       f.adapter :net_http

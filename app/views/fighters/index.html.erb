@@ -5,7 +5,7 @@
     <p> <img src= <%= url_for(variant.image_url) %> width="320" height="240"  > </p>
         <p> Name: <%= variant.name %></p>
         <p> Author: <%= variant.author %> </p>
-        <p> Website: <%= variant.website %> </p>
+        <p> Website: <%= link_to variant.website, variant.website, target: :blank %> </p>
         <p> Origin: <%= variant.game_name %> </p>
     <% end %>
 <% end %>
