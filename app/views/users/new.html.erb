@@ -1,0 +1,17 @@
+<h2>Create a new account</h2>
+
+<%= form_with url: '/register', method: :post, local: true do |f| %>
+    <%= f.label :email, 'Email Address' %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password, 'Password' %>
+    <%= f.text_field :password %>
+
+    <%= f.label :password_confirmation, 'Confirm password' %>
+    <%= f.text_field :password_confirmation %>
+
+    <%= f.label :admin, 'Admin' %>
+    <%= f.check_box :admin, {}, 'true', 'false' %>
+
+    <%= f.submit 'Submit' %>
+<% end %>
