@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   post '/characters', to: 'characters#create'
   post '/fighters', to: 'fighters#create'
   get '/register', to: 'users#new'
+  post '/register', to: 'users#create'
 
 end
