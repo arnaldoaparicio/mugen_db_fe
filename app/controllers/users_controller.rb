@@ -4,7 +4,7 @@ class UsersController < ApplicationController
                                password: params[:password],
                                password_confirmation: params[:password],
                                admin: params[:admin])
-    session[:id] = user.id
+    session[:user_id] = user.id
     redirect_to '/'
   end
 
