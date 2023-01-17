@@ -3,4 +3,6 @@ All characters in <%= @origin.name %>
     <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %></p>
 <% end %>
 
-<%= link_to 'Add a new fighter', "/characters/#{params[:id]}/new" %>
+<% if session[:user_id] %>
+    <%= link_to 'Add a new fighter', "/characters/#{params[:id]}/new" %>
+<% end %>
