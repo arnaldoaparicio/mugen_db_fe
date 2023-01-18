@@ -1,0 +1,12 @@
+<h2>Login to your account</h2>
+
+
+<%= form_with url: '/login', method: :post, local: true do |f| %>
+<%= f.label :email, 'Email Address' %>
+<%= f.text_field :email %>
+
+<%= f.label :password, 'Password' %>
+<%= f.label :password %>
+
+<%= f.submit 'Submit' %>
+<% end %>
