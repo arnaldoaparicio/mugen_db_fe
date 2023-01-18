@@ -1,3 +1,4 @@
+<% if session[:user_id] == nil %>
 <h2>Create a new account</h2>
 
 <%= form_with url: '/register', method: :post, local: true do |f| %>
@@ -14,4 +15,8 @@
     <%= f.check_box :admin, {}, 'true', 'false' %>
 
     <%= f.submit 'Submit' %>
+<% end %>
+<% else %>
+<h2>You're already logged in!</h2>
+<p> <%= link_to 'Return to home', '/' %> </p>
 <% end %>
