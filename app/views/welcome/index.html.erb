@@ -9,4 +9,9 @@ Stages
 Screenpacks
 Lifebars
 Misc
-<%= link_to 'Register', '/register' %>
+
+<% if session[:user_id] %>
+    <%= link_to 'Logout', '/logout' %>
+<% else %>
+    <%= link_to 'Register', '/register' %>
+<% end %>
