@@ -1,14 +1,13 @@
+<% if @characters.empty? %>
+    This section is empty. There will be content here soon
+<% else %>
+    Character Origins
 
-    <% if @characters.empty? %>
-This section is empty. There will be content here soon
-    <% else %>
-Character Origins
-
-<% @characters.each do |character| %>
-    <p> <%= link_to character.name, "/characters/#{character.id}" %> </p>
+    <% @characters.each do |character| %>
+        <p> <%= link_to character.name, "/characters/#{character.id}" %> </p>
     <% end %>
 <% end %>
 
 <% if session[:user_id]%>
-    <p><%= link_to 'Add new origin entry', '/characters/new' %></p>
+    <p> <%= link_to 'Add new origin entry', '/characters/new' %> </p>
 <% end %>

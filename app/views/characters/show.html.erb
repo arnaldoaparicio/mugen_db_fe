@@ -1,6 +1,6 @@
 All characters in <%= @origin.name %>
 <% @fighters.each do |fighter| %>
-    <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %></p>
+    <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %> </p>
 <% end %>
 
 <% if session[:user_id] %>
