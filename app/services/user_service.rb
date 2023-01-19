@@ -12,6 +12,7 @@ class UserService
   end
 
   def self.connection
-    Faraday.new(url: 'http://localhost:3000')
+    # Faraday.new(url: 'http://localhost:3000')
+    Faraday.new(url: 'https://mugen-db-be.fly.dev')
   end
 end
