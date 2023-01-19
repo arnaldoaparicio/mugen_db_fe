@@ -7,6 +7,7 @@ class SessionService
   end
 
   def self.connection
-    Faraday.new('http://localhost:3000')
+    # Faraday.new('http://localhost:3000')
+    Faraday.new(url: 'https://mugen-db-be.fly.dev')
   end
 end
