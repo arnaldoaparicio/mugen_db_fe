@@ -5,7 +5,7 @@ class UserFacade
   end
 
   def self.find_user(user_id)
-    user = UserService.get_user(user_id)
+    user = UserService.get_user(user_id)[:data]
     User.new(user)
   end
 end
