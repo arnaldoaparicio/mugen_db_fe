@@ -11,7 +11,7 @@ class CharactersController < ApplicationController
   end
 
   def create
-    character = CharacterFacade.create_character(origin: params[:origin])
+    CharacterFacade.create_character(origin: params[:origin])
     redirect_to '/characters'
   end
 end
