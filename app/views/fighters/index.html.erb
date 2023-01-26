@@ -1,3 +1,4 @@
+<center>
 <% if @fighter_variants.empty? %>
     <p> Hello, this section is empty. Something will be here soon. </p>
 <% else %>
@@ -13,3 +14,4 @@
 <% if session[:user_id] %>
     <%= link_to 'Add a new entry', "/characters/#{@single_game_origin.id}/#{@single_fighter.id}/new" %>
 <% end %>
+</center>
