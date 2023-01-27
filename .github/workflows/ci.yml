@@ -9,7 +9,7 @@ jobs:
         ports: 
           - 5432:5432
         env:
-          POSTGRES_DB: ${{ secrets.MUGEN_DB }}
+          POSTGRES_DB: fubar
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: ${{ secrets.MUGEN_PASS }}
         options: >-
