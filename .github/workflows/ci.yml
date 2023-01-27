@@ -28,6 +28,8 @@ jobs:
       with:
         cmd: install
     - name: Build and run tests
+      env:
+        RAILS_ENV: test
       run: |
         sudo apt-get -yqq install libpq-dev
         gem install bundler
