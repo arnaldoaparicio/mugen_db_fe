@@ -29,13 +29,15 @@ jobs:
         cmd: install
     - name: Build and run tests
       env:
+        DATABASE_URL: ${{ secrets.MUGEN_DB }}
         RAILS_ENV: test
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: ${{ secrets.MUGEN_PASS }}
       run: |
         sudo apt-get -yqq install libpq-dev
         gem install bundler
         bundle install --jobs 4 --retry 3
-        bundle exec rails db:setup
-        bundle exec rails rspec
+        bundle exec rails test
 
 
       
