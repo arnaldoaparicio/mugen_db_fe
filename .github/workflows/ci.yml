@@ -33,7 +33,6 @@ jobs:
         DATABASE_URL: ${{ secrets.MUGEN_DB }}
         RAILS_ENV: test
         POSTGRES_USER: postgres
-        POSTGRES_HOST: ${{ secrets.MUGEN_HOST }}
         POSTGRES_PASSWORD: ${{ secrets.MUGEN_PASS }}
       run: |
         sudo apt-get -yqq install libpq-dev
