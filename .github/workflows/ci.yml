@@ -8,7 +8,7 @@ jobs:
       db:
         image: postgres:14
         ports: 
-          - 5432:5433
+          - 5432:5432
         env:
           POSTGRES_DB: postgres
           POSTGRES_USER: postgres
@@ -29,6 +29,8 @@ jobs:
       with:
         cmd: install
     - name: Build and run tests
+      env:
+        DATABASE_URL: ${{ secrets.MUGEN_DB }}
       run: |
         sudo apt-get -yqq install libpq-dev
         gem install bundler
