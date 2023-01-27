@@ -9,9 +9,9 @@ jobs:
         ports: 
           - 5432:5432
         env:
-          POSTGRES_DB: fubar
+          POSTGRES_DB: postgres
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: ${{ secrets.MUGEN_PASS }}
+          POSTGRES_PASSWORD: postgres
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -34,7 +34,8 @@ jobs:
         sudo apt-get -yqq install libpq-dev
         gem install bundler
         bundle install --jobs 4 --retry 3
-        bundle exec rails test
+        rails db:setup
+        bundle exec rails rspec
 
 
       
