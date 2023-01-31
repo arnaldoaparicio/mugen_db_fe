@@ -37,6 +37,7 @@ jobs:
       run: |
         sudo apt-get -yqq install libpq-dev
         gem install bundler
+        pg_ctl start
         bundle install --jobs 4 --retry 3
         bundle exec rake
 
