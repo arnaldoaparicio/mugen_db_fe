@@ -63,6 +63,7 @@ test:
   database: mugen_db_fe_test
   username: postgres
   password: "postgres"
+  host: localhost
   port: 5433
 
 
