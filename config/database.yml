@@ -63,6 +63,7 @@ test:
   database: mugen_db_fe_test
   username: postgres
   password: "postgres"
+  port: 5433
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
