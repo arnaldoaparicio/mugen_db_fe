@@ -27,7 +27,7 @@ jobs:
         cmd: install
     - name: Build and run tests
       env:
-        DATABASE_URL: psql -d ${{ secrets.MUGEN_DB }}
+        DATABASE_URL: ${{ secrets.MUGEN_DB }}
         # POSTGRES_USER: postgres
         # POSTGRES_PASSWORD: ${{ secrets.MUGEN_PASS }}
         # POSTGRES_HOST: ${{ secrets.MUGEN_HOST }}
@@ -37,6 +37,7 @@ jobs:
         sudo apt-get -yqq install libpq-dev
         gem install bundler
         bundle install --jobs 4 --retry 3
+        psql -d ${{ secrets.MUGEN_DB }}
         bundle exec rspec spec
 
 
