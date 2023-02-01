@@ -38,7 +38,8 @@ jobs:
         sudo apt-get -yqq install libpq-dev
         gem install bundler
         bundle install --jobs 4 --retry 3
-        bundle exec rake
+        bundle exec rake test
+        bundle exec rspec spec
 
 
       
