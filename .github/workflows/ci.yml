@@ -27,8 +27,7 @@ jobs:
         cmd: install
     - name: Build and run tests
       env:
-        DATABASE_URL: ${{ secrets.MUGEN_DB }}
-        PG_HOST: localhost
+        DATABASE_URL: psql -d ${{ secrets.MUGEN_DB }}
         # POSTGRES_USER: postgres
         # POSTGRES_PASSWORD: ${{ secrets.MUGEN_PASS }}
         # POSTGRES_HOST: ${{ secrets.MUGEN_HOST }}
