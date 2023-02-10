@@ -59,8 +59,13 @@ test:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  url: <%= ENV['DATABASE_URL'] %>
+  # url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['TEST_URL'] %>
   database: mugen_db_fe_test
+  username: postgres
+  password: <%= ENV['MUGEN_PASS'] %>
+  host: <%= ENV['MUGEN_HOST'] %>
+  PORT: 5432
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
