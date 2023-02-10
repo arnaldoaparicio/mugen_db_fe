@@ -60,6 +60,7 @@ test:
   adapter: postgresql
   encoding: unicode
   url: <%= ENV['DATABASE_URL'] %>
+  port: 5432
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
