@@ -21,39 +21,41 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8ec048de4847ea253782556ee9793242"
+      - W/"6469646d35931248386141a57aa4d39f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 126cd3ed-8c7f-4bb4-92d9-519dea19716c
+      - 78d4e214-7567-45d5-a0c4-b5c561183ef5
       X-Runtime:
-      - '0.024040'
+      - '0.028744'
       Transfer-Encoding:
       - chunked
       Fly-Cache-Status:
       - MISS
       Date:
-      - Mon, 16 Jan 2023 21:55:40 GMT
+      - Fri, 27 Jan 2023 20:00:12 GMT
       Server:
-      - Fly/e78c172f (2023-01-10)
+      - Fly/3d083d3e (2023-01-26)
       Via:
       - 1.1 fly.io
       Fly-Request-Id:
-      - 01GPY99DYQZDHJQGP51MZNX5J3-lga
+      - 01GQTD1XG8W6Z0SBK41C8AZD8T-lga
     body:
       encoding: ASCII-8BIT
       string: '{"data":[{"id":"1","type":"characters","attributes":{"origin":"Marvel
         vs Series/X-COTA","series_fighters":[{"id":1,"name":"Iron Man","created_at":"2022-12-16T19:47:22.514Z","updated_at":"2022-12-16T19:47:22.514Z","character_id":1},{"id":9,"name":"Juggernaut","created_at":"2022-12-24T17:20:39.529Z","updated_at":"2022-12-24T17:20:39.529Z","character_id":1},{"id":10,"name":"Venom","created_at":"2022-12-24T17:23:02.648Z","updated_at":"2022-12-24T17:23:02.648Z","character_id":1},{"id":11,"name":"Strider
         Hiryu","created_at":"2022-12-24T17:24:12.914Z","updated_at":"2022-12-24T17:24:12.914Z","character_id":1},{"id":15,"name":"Blackheart","created_at":"2022-12-24T18:10:36.012Z","updated_at":"2022-12-24T18:10:36.012Z","character_id":1},{"id":16,"name":"Cyclops","created_at":"2022-12-24T18:13:28.014Z","updated_at":"2022-12-24T18:13:28.014Z","character_id":1},{"id":21,"name":"Dr.
         Doom","created_at":"2022-12-24T18:17:21.096Z","updated_at":"2022-12-24T18:17:21.096Z","character_id":1},{"id":26,"name":"Magneto","created_at":"2022-12-27T20:53:03.569Z","updated_at":"2022-12-27T20:53:03.569Z","character_id":1},{"id":39,"name":"Omega
-        Red","created_at":"2023-01-08T20:01:57.761Z","updated_at":"2023-01-08T20:01:57.761Z","character_id":1},{"id":43,"name":"Shuma-Gorath","created_at":"2023-01-10T02:19:59.389Z","updated_at":"2023-01-10T02:19:59.389Z","character_id":1}]}},{"id":"2","type":"characters","attributes":{"origin":"The
+        Red","created_at":"2023-01-08T20:01:57.761Z","updated_at":"2023-01-08T20:01:57.761Z","character_id":1},{"id":43,"name":"Shuma-Gorath","created_at":"2023-01-10T02:19:59.389Z","updated_at":"2023-01-10T02:19:59.389Z","character_id":1},{"id":47,"name":"Jill","created_at":"2023-01-19T16:34:55.830Z","updated_at":"2023-01-19T16:34:55.830Z","character_id":1}]}},{"id":"2","type":"characters","attributes":{"origin":"The
         King of Fighters Series","series_fighters":[{"id":2,"name":"Shen Woo","created_at":"2022-12-24T15:56:12.084Z","updated_at":"2022-12-24T15:56:12.084Z","character_id":2},{"id":7,"name":"Iori","created_at":"2022-12-24T16:30:17.493Z","updated_at":"2022-12-24T16:30:17.493Z","character_id":2},{"id":13,"name":"Clark","created_at":"2022-12-24T17:26:11.451Z","updated_at":"2022-12-24T17:26:11.451Z","character_id":2},{"id":27,"name":"Orochi
-        Iori","created_at":"2022-12-27T20:54:58.024Z","updated_at":"2022-12-27T20:54:58.024Z","character_id":2},{"id":31,"name":"Shingo","created_at":"2023-01-05T20:37:25.218Z","updated_at":"2023-01-05T20:37:25.218Z","character_id":2},{"id":32,"name":"Shermie","created_at":"2023-01-05T20:47:16.775Z","updated_at":"2023-01-05T20:47:16.775Z","character_id":2},{"id":35,"name":"Ralf","created_at":"2023-01-06T17:44:32.732Z","updated_at":"2023-01-06T17:44:32.732Z","character_id":2},{"id":36,"name":"Oswald","created_at":"2023-01-06T17:46:30.007Z","updated_at":"2023-01-06T17:46:30.007Z","character_id":2},{"id":44,"name":"Kyo","created_at":"2023-01-10T02:21:07.110Z","updated_at":"2023-01-10T02:21:07.110Z","character_id":2}]}},{"id":"3","type":"characters","attributes":{"origin":"Street
-        Fighter Alpha/Zero","series_fighters":[{"id":3,"name":"Rolento","created_at":"2022-12-24T16:08:06.322Z","updated_at":"2022-12-24T16:08:06.322Z","character_id":3},{"id":42,"name":"Guy","created_at":"2023-01-10T02:12:44.665Z","updated_at":"2023-01-10T02:12:44.665Z","character_id":3}]}},{"id":"4","type":"characters","attributes":{"origin":"Capcom
+        Iori","created_at":"2022-12-27T20:54:58.024Z","updated_at":"2022-12-27T20:54:58.024Z","character_id":2},{"id":31,"name":"Shingo","created_at":"2023-01-05T20:37:25.218Z","updated_at":"2023-01-05T20:37:25.218Z","character_id":2},{"id":32,"name":"Shermie","created_at":"2023-01-05T20:47:16.775Z","updated_at":"2023-01-05T20:47:16.775Z","character_id":2},{"id":35,"name":"Ralf","created_at":"2023-01-06T17:44:32.732Z","updated_at":"2023-01-06T17:44:32.732Z","character_id":2},{"id":36,"name":"Oswald","created_at":"2023-01-06T17:46:30.007Z","updated_at":"2023-01-06T17:46:30.007Z","character_id":2},{"id":44,"name":"Kyo","created_at":"2023-01-10T02:21:07.110Z","updated_at":"2023-01-10T02:21:07.110Z","character_id":2},{"id":46,"name":"Young
+        Geese","created_at":"2023-01-19T16:30:09.656Z","updated_at":"2023-01-19T16:30:09.656Z","character_id":2}]}},{"id":"3","type":"characters","attributes":{"origin":"Street
+        Fighter Alpha/Zero","series_fighters":[{"id":3,"name":"Rolento","created_at":"2022-12-24T16:08:06.322Z","updated_at":"2022-12-24T16:08:06.322Z","character_id":3},{"id":42,"name":"Guy","created_at":"2023-01-10T02:12:44.665Z","updated_at":"2023-01-10T02:12:44.665Z","character_id":3},{"id":45,"name":"Cody","created_at":"2023-01-18T17:19:38.897Z","updated_at":"2023-01-18T17:19:38.897Z","character_id":3},{"id":48,"name":"Dhalsim","created_at":"2023-01-19T16:43:43.582Z","updated_at":"2023-01-19T16:43:43.582Z","character_id":3}]}},{"id":"4","type":"characters","attributes":{"origin":"Capcom
         vs. SNK Series","series_fighters":[{"id":4,"name":"Sakura","created_at":"2022-12-24T16:10:04.818Z","updated_at":"2022-12-24T16:10:04.818Z","character_id":4},{"id":17,"name":"Nakoruru","created_at":"2022-12-24T18:14:27.065Z","updated_at":"2022-12-24T18:14:27.065Z","character_id":4},{"id":18,"name":"Ryu","created_at":"2022-12-24T18:15:12.784Z","updated_at":"2022-12-24T18:15:12.784Z","character_id":4},{"id":19,"name":"Shin
         Gouki","created_at":"2022-12-24T18:15:53.178Z","updated_at":"2022-12-24T18:15:53.178Z","character_id":4},{"id":20,"name":"Dan","created_at":"2022-12-24T18:16:39.154Z","updated_at":"2022-12-24T18:16:39.154Z","character_id":4},{"id":24,"name":"Haohmaru","created_at":"2022-12-27T20:49:39.321Z","updated_at":"2022-12-27T20:49:39.321Z","character_id":4},{"id":29,"name":"Akuma/Gouki","created_at":"2023-01-05T20:34:16.404Z","updated_at":"2023-01-05T20:34:16.404Z","character_id":4},{"id":30,"name":"Terry","created_at":"2023-01-05T20:36:12.428Z","updated_at":"2023-01-05T20:36:12.428Z","character_id":4},{"id":33,"name":"Vega
         (Dictator)","created_at":"2023-01-06T17:41:42.327Z","updated_at":"2023-01-06T17:41:42.327Z","character_id":4},{"id":34,"name":"M.
-        Bison (Boxer)","created_at":"2023-01-06T17:43:19.129Z","updated_at":"2023-01-06T17:43:19.129Z","character_id":4},{"id":37,"name":"Vice","created_at":"2023-01-06T17:54:14.332Z","updated_at":"2023-01-06T17:54:14.332Z","character_id":4},{"id":38,"name":"Chun-Li","created_at":"2023-01-07T01:52:56.633Z","updated_at":"2023-01-07T01:52:56.633Z","character_id":4}]}},{"id":"5","type":"characters","attributes":{"origin":"Mortal
+        Bison (Boxer)","created_at":"2023-01-06T17:43:19.129Z","updated_at":"2023-01-06T17:43:19.129Z","character_id":4},{"id":37,"name":"Vice","created_at":"2023-01-06T17:54:14.332Z","updated_at":"2023-01-06T17:54:14.332Z","character_id":4},{"id":38,"name":"Chun-Li","created_at":"2023-01-07T01:52:56.633Z","updated_at":"2023-01-07T01:52:56.633Z","character_id":4},{"id":49,"name":"Cammy","created_at":"2023-01-19T16:46:27.566Z","updated_at":"2023-01-19T16:46:27.566Z","character_id":4},{"id":50,"name":"E.
+        Honda","created_at":"2023-01-26T01:58:38.056Z","updated_at":"2023-01-26T01:58:38.056Z","character_id":4}]}},{"id":"5","type":"characters","attributes":{"origin":"Mortal
         Kombat Series","series_fighters":[{"id":5,"name":"Raiden","created_at":"2022-12-24T16:11:57.883Z","updated_at":"2022-12-24T16:11:57.883Z","character_id":5},{"id":41,"name":"Sub-Zero","created_at":"2023-01-10T02:12:00.055Z","updated_at":"2023-01-10T02:12:00.055Z","character_id":5}]}},{"id":"6","type":"characters","attributes":{"origin":"Melty
         Blood Series","series_fighters":[{"id":6,"name":"Warakia","created_at":"2022-12-24T16:14:36.164Z","updated_at":"2022-12-24T16:14:36.164Z","character_id":6}]}},{"id":"7","type":"characters","attributes":{"origin":"Guilty
         Gear Series","series_fighters":[{"id":8,"name":"Ky","created_at":"2022-12-24T17:01:06.364Z","updated_at":"2022-12-24T17:01:06.364Z","character_id":7}]}},{"id":"8","type":"characters","attributes":{"origin":"Street
@@ -63,5 +65,5 @@ http_interactions:
         Savior","series_fighters":[{"id":22,"name":"Jedah","created_at":"2022-12-27T20:26:34.408Z","updated_at":"2022-12-27T20:26:34.408Z","character_id":10}]}},{"id":"11","type":"characters","attributes":{"origin":"Arcana
         Heart","series_fighters":[{"id":28,"name":"Kira","created_at":"2022-12-27T20:56:47.391Z","updated_at":"2022-12-27T20:56:47.391Z","character_id":11}]}},{"id":"12","type":"characters","attributes":{"origin":"Street
         Fighter 3","series_fighters":[{"id":40,"name":"Dudley","created_at":"2023-01-08T20:05:11.843Z","updated_at":"2023-01-08T20:05:11.843Z","character_id":12}]}}]}'
-  recorded_at: Mon, 16 Jan 2023 21:55:41 GMT
+  recorded_at: Fri, 27 Jan 2023 20:00:13 GMT
 recorded_with: VCR 6.1.0
