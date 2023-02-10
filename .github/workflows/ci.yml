@@ -7,7 +7,7 @@ jobs:
     services: 
       db:
         image: postgres:14
-        ports: ["5433:5432"]
+        ports: ["5432:5432"]
         env:
           POSTGRES_PASSWORD: "postgres"
         options: >-
@@ -28,11 +28,12 @@ jobs:
     - name: Build and run tests
       env:
         DATABASE_URL: ${{ secrets.MUGEN_DB }}
-      #   # POSTGRES_USER: postgres
-      #   # POSTGRES_PASSWORD: ${{ secrets.MUGEN_PASS }}
-      #   # POSTGRES_HOST: ${{ secrets.MUGEN_HOST }}
-      #   # POSTGRES_DB: postgres
-      #   # RAILS_ENV: test
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: ${{ secrets.MUGEN_PASS }}
+        POSTGRES_HOST: ${{ secrets.MUGEN_HOST }}
+        POSTGRES_DB: postgres
+        PORT: 5432
+        RAILS_ENV: test
       run: |
         sudo apt-get -yqq install libpq-dev
         gem install bundler
