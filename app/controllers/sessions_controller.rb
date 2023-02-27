@@ -3,8 +3,13 @@ class SessionsController < ApplicationController
 
   def create
     user = SessionFacade.user_login(email: params[:email], password: params[:password])
-    session[:user_id] = user.id
-    redirect_to '/'
+    if user.admin == 'Login failed' || user.email == 'Login failed' || user.id == 'Login failed'
+      flash.now[:notice] = 'Login Failed!'
+      redirect_to '/login'
+    else
+      session[:user_id] = user.id
+      redirect_to '/'
+    end
   end
 
   def destroy
