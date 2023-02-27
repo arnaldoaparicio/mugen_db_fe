@@ -9,9 +9,10 @@
     <% end %>
 <% end %>
 <br>
-<%= link_to 'Back to Home Page', '/'%>
+
 
 <% if session[:user_id]%>
     <p> <%= link_to 'Add new origin entry', '/characters/new' %> </p>
 <% end %>
+<p><%= link_to 'Back to Home Page', '/'%></p>
 </center>
