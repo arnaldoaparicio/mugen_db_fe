@@ -11,6 +11,9 @@
     <% end %>
 <% end %>
 
+
+<%= link_to "Back to #{@single_game_origin.name} page", "/characters/#{@single_game_origin.id}/" %>
+
 <% if session[:user_id] %>
     <%= link_to 'Add a new entry', "/characters/#{@single_game_origin.id}/#{@single_fighter.id}/new" %>
 <% end %>

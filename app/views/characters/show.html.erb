@@ -3,6 +3,8 @@
 <% @fighters.each do |fighter| %>
     <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %> </p>
 <% end %>
+<br>
+<%= link_to "Back to Characters page", "/characters" %>
 
 <% if session[:user_id] %>
     <%= link_to 'Add a new fighter', "/characters/#{params[:id]}/new" %>
