@@ -16,4 +16,10 @@ RSpec.describe 'welcome/index', type: :feature do
     click_link('Characters')
     expect(current_path).to eq('/characters')
   end
+
+  it 'clicks on the login page' do
+    visit('/')
+    click_link('LogIn')
+    expect(current_path).to eq('/login')
+  end
 end
