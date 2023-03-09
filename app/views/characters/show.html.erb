@@ -5,7 +5,7 @@
 <% end %>
 <br>
 
-<% if session[:user_id] %>
+<% if current_user %>
     <%= link_to 'Add a new fighter', "/characters/#{params[:id]}/new" %>
 <% end %>
 <p><%= link_to "Back to Characters page", "/characters" %></p>
