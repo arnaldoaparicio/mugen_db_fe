@@ -18,4 +18,16 @@ RSpec.describe 'characters/index', type: :feature do
     expect(page).to have_content('Kyo')
     expect(page).to have_content('Guile')
   end
+
+  it 'shows the add new character origin link', :vcr do
+    
+    
+    user = User.new({id: '1', attributes: { email: 'mailman@mail.com', admin: true } })
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit('/characters')
+    # require 'pry'; binding.pry
+    save_and_open_page
+    expect(page).to have_content('Add new origin entry')
+  end
 end
