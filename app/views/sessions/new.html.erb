@@ -1,3 +1,4 @@
+<center>
 <% if session[:user_id] == nil %>
     <h2>Login to your account</h2>
 
@@ -14,3 +15,4 @@
     <h2>You are already logged in!</h2>
     <p> <%= link_to 'Return to home', '/' %> </p>
 <% end %>
+</center>
