@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e55c174e-8ecc-4e2d-9a65-8ba65657f8cb
+      - 18a0784c-2632-4852-a695-25388e4c0684
       X-Runtime:
-      - '0.086391'
+      - '0.002993'
       Transfer-Encoding:
       - chunked
     body:
@@ -36,5 +36,5 @@ http_interactions:
         Fallen Angel","series_fighters":[{"id":3,"name":"Roche","created_at":"2023-01-16T21:51:20.342Z","updated_at":"2023-01-16T21:51:20.342Z","character_id":1}]}},{"id":"2","type":"characters","attributes":{"origin":"Capcom
         vs. SNK Series","series_fighters":[{"id":1,"name":"Ryu","created_at":"2023-01-16T21:51:20.338Z","updated_at":"2023-01-16T21:51:20.338Z","character_id":2},{"id":2,"name":"Guile","created_at":"2023-01-16T21:51:20.340Z","updated_at":"2023-01-16T21:51:20.340Z","character_id":2},{"id":4,"name":"Kyo","created_at":"2023-01-16T21:51:20.344Z","updated_at":"2023-01-16T21:51:20.344Z","character_id":2}]}},{"id":"3","type":"characters","attributes":{"origin":"The
         King of Fighters","series_fighters":[]}}]}'
-  recorded_at: Tue, 07 Mar 2023 19:26:55 GMT
+  recorded_at: Thu, 09 Mar 2023 19:46:40 GMT
 recorded_with: VCR 6.1.0
