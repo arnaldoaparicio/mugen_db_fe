@@ -1,19 +1,19 @@
 <center>
-<% if @fighter_variants.empty? %>
-    <p> Hello, this section is empty. Something will be here soon. </p>
-<% else %>
-    <% @fighter_variants.each do |variant| %>
-    <p> <img src= <%= url_for(variant.image_url) %> width="320" height="240"  > </p>
-        <p> Name: <%= variant.name %></p>
-        <p> Author: <%= variant.author %> </p>
-        <p> Website: <%= link_to variant.website, variant.website, target: :blank %> </p>
-        <p> Origin: <%= variant.game_name %> </p>
+    <% if @fighter_variants.empty? %>
+        <p> Hello, this section is empty. Something will be here soon. </p>
+    <% else %>
+        <% @fighter_variants.each do |variant| %>
+            <p> <img src= <%= url_for(variant.image_url) %> width="320" height="240"  > </p>
+            <p> Name: <%= variant.name %></p>
+            <p> Author: <%= variant.author %> </p>
+            <p> Website: <%= link_to variant.website, variant.website, target: :blank %> </p>
+            <p> Origin: <%= variant.game_name %> </p>
+        <% end %>
     <% end %>
-<% end %>
 
-<% if current_user %>
-    <%= link_to 'Add a new entry', "/characters/#{@single_game_origin.id}/#{@single_fighter.id}/new" %>
-<% end %>
+    <% if current_user %>
+        <%= link_to 'Add a new entry', "/characters/#{@single_game_origin.id}/#{@single_fighter.id}/new" %>
+    <% end %>
 
-<p><%= link_to "Back to #{@single_game_origin.name} page", "/characters/#{@single_game_origin.id}/" %></p>
+    <p><%= link_to "Back to #{@single_game_origin.name} page", "/characters/#{@single_game_origin.id}/" %></p>
 </center>
