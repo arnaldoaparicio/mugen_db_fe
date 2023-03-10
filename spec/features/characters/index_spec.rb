@@ -4,7 +4,8 @@ RSpec.describe 'characters/index', type: :feature do
   it 'has some character origins' do
     VCR.use_cassette('contains_some_character_origins') do
     visit('/characters')
-    expect(page).to have_content('The Fallen Angel')
+    save_and_open_page
+    expect(page).to have_content('Melty Blood Series')
     expect(page).to have_content('Capcom vs. SNK Series')
     end
   end
@@ -20,14 +21,15 @@ RSpec.describe 'characters/index', type: :feature do
   end
 
   it 'shows the add new character origin link', :vcr do
-    
-    
     user = User.new({id: '1', attributes: { email: 'mailman@mail.com', admin: true } })
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit('/characters')
-    # require 'pry'; binding.pry
-    save_and_open_page
     expect(page).to have_content('Add new origin entry')
+  end
+
+  it 'does not show the add new character entry link', :vcr do
+    visit('/characters')
+    expect(page).to_not have_content('Add new origin entry')
   end
 end
