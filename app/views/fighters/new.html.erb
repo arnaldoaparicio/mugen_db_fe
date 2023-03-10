@@ -1,19 +1,19 @@
 <center>
-<% if current_user && current_user.admin == true %>
+    <% if current_user && current_user.admin == true %>
 
-    <h2>Submit a new fighter</h2>
+        <h2>Submit a new fighter</h2>
 
-    <%= form_with url: '/fighters', method: :post, local: true do |f| %>
-        <%= f.label :name, 'Name' %>
-        <%= f.text_field :name %>
+        <%= form_with url: '/fighters', method: :post, local: true do |f| %>
+            <%= f.label :name, 'Name' %>
+            <%= f.text_field :name %>
 
-        <%= f.hidden_field :character_id %>
-        <%= hidden_field_tag :character_id, "#{params[:id]}" %>
+            <%= f.hidden_field :character_id %>
+            <%= hidden_field_tag :character_id, "#{params[:id]}" %>
     
-        <%= f.submit 'Submit' %>
+            <%= f.submit 'Submit' %>
+        <% end %>
+    <% else %>
+        <h2>You don't have permission to access this page.</h2>
+        <p> <%= link_to 'Return to home', '/' %> </p>
     <% end %>
-<% else %>
-    <h2>You don't have permission to access this page.</h2>
-    <p> <%= link_to 'Return to home', '/' %> </p>
-<% end %>
 </center>
