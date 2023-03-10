@@ -4,7 +4,7 @@ RSpec.describe 'characters/new', type: :feature do
     it 'shows the characters new page while logged out' do
         visit('/characters/new')
         expect(page).to have_content("You don't have permission to access this page.")
-        expect(page).to have_link('Return to home')
+        expect(page).to have_link('Return to Home Page')
 
         expect(page).to_not have_content('Submit a new entry for origin')
         expect(page).to_not have_content('Name of game origin')
