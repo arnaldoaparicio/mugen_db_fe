@@ -1,12 +1,12 @@
 <center>
-<h2>All characters in <%= @origin.name %></h2>
-<% @fighters.each do |fighter| %>
-    <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %> </p>
-<% end %>
-<br>
+    <h2>All characters in <%= @origin.name %></h2>
+    <% @fighters.each do |fighter| %>
+        <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %> </p>
+    <% end %>
+    <br>
 
-<% if current_user %>
-    <%= link_to 'Add a new fighter', "/characters/#{params[:id]}/new" %>
-<% end %>
-<p><%= link_to "Back to Characters page", "/characters" %></p>
+    <% if current_user %>
+        <%= link_to 'Add a new fighter', "/characters/#{params[:id]}/new" %>
+    <% end %>
+    <p><%= link_to "Back to Characters page", "/characters" %></p>
 </center>
