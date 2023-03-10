@@ -4,7 +4,7 @@ RSpec.describe 'characters/index', type: :feature do
   it 'has some character origins' do
     VCR.use_cassette('contains_some_character_origins') do
     visit('/characters')
-    save_and_open_page
+  
     expect(page).to have_content('Melty Blood Series')
     expect(page).to have_content('Capcom vs. SNK Series')
     end
