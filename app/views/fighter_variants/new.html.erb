@@ -1,34 +1,34 @@
 <center>
-<% if current_user && current_user.admin == true %>
+  <% if current_user && current_user.admin == true %>
 
-  <h2>Submit a new entry</h2>
+    <h2>Submit a new entry</h2>
 
-  <%= form_with url: '/fighter_variants', method: :post, multipart: true, local: true do |f| %>
-    <%= f.label :name, 'Name' %>
-    <%= f.text_field :name %>
+    <%= form_with url: '/fighter_variants', method: :post, multipart: true, local: true do |f| %>
+      <%= f.label :name, 'Name' %>
+      <%= f.text_field :name %>
 
-    <%= f.label :author, 'Author' %>
-    <%= f.text_field :author %>
+      <%= f.label :author, 'Author' %>
+      <%= f.text_field :author %>
 
-    <%= f.label :website, 'Website' %>
-    <%= f.text_field :website %>
+      <%= f.label :website, 'Website' %>
+      <%= f.text_field :website %>
 
-    <%= f.label :game_name, 'Origin' %>
-    <%= f.text_field :game_name %>
+      <%= f.label :game_name, 'Origin' %>
+      <%= f.text_field :game_name %>
 
-    <%= f.label :avatar, 'Attach an image' %>
-    <%= f.file_field :avatar, accept: 'image/*', direct_upload: false %>
+      <%= f.label :avatar, 'Attach an image' %>
+      <%= f.file_field :avatar, accept: 'image/*', direct_upload: false %>
 
-    <%= f.hidden_field :id %>
-    <%= hidden_field_tag :id, "#{params[:id]}" %>
+      <%= f.hidden_field :id %>
+      <%= hidden_field_tag :id, "#{params[:id]}" %>
 
-    <%= f.hidden_field :fighter_id %>
-    <%= hidden_field_tag :fighter_id, "#{params[:fighter_id]}" %>
+      <%= f.hidden_field :fighter_id %>
+      <%= hidden_field_tag :fighter_id, "#{params[:fighter_id]}" %>
 
-    <%= f.submit 'Submit' %>
+      <%= f.submit 'Submit' %>
+    <% end %>
+  <% else %>
+    <h2>You don't have permission to access this page.</h2>
+    <p> <%= link_to 'Return to Home Page', '/' %> </p>
   <% end %>
-<% else %>
-  <h2>You don't have permission to access this page.</h2>
-  <p> <%= link_to 'Return to Home Page', '/' %> </p>
-<% end %>
 </center>
