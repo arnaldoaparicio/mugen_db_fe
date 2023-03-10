@@ -1,18 +1,16 @@
 <center>
-<% if @characters.empty? %>
-    This section is empty. There will be content here soon
-<% else %>
-    <h1>Character Origins</h1>
-
-    <% @characters.each do |character| %>
-        <p> <%= link_to character.name, "/characters/#{character.id}" %> </p>
+    <% if @characters.empty? %>
+        This section is empty. There will be content here soon
+    <% else %>
+        <h1>Character Origins</h1>
+        <% @characters.each do |character| %>
+            <p> <%= link_to character.name, "/characters/#{character.id}" %> </p>
+        <% end %>
     <% end %>
-<% end %>
-<br>
+    <br>
+    <% if current_user %>
+        <p> <%= link_to 'Add new origin entry', '/characters/new' %> </p>
+    <% end %>
 
-
-<% if current_user %>
-    <p> <%= link_to 'Add new origin entry', '/characters/new' %> </p>
-<% end %>
-<p><%= link_to 'Back to Home Page', '/'%></p>
+    <p><%= link_to 'Back to Home Page', '/'%></p>
 </center>
