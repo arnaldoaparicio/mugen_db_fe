@@ -14,5 +14,6 @@ The purpose of this is to provide a large collection of links for the user to ea
 ## Technical Goals
 - Pass mulipart/form-data (JSON data + Image) from the Rails frontend to the Rails API backened to allow creation of new posts as well as uploading to an Amazon S3 bucket
 - Display images from Amazon S3 bucket upon creation of a new post.
+- Utilize a CI/CD workflow
 
 For more in-depth information regarding challenges and goals, check out this log I created: https://gist.github.com/arnaldoaparicio/c91ffdefd2573c21ba2c3c921760f8e1
