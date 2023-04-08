@@ -37,6 +37,7 @@ gem 'bootstrap'
 gem 'faraday'
 gem 'faraday-multipart'
 gem "rack", ">= 2.2.6.3"
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
