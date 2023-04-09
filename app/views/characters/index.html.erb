@@ -1,11 +1,13 @@
 <center>
-    <% if @characters.empty? %>
+    <% if @paginate_characters.empty? %>
         This section is empty. There will be content here soon
     <% else %>
         <h1>Character Origins</h1>
-        <% @characters.each do |character| %>
+        <% @paginate_characters.each do |character| %>
             <p> <%= link_to character.name, "/characters/#{character.id}" %> </p>
         <% end %>
+    <%= link_to_prev_page @paginate_characters, 'Previous Page' %>
+    <%= link_to_next_page @paginate_characters, 'Next Page' %>
     <% end %>
     <br>
     <% if current_user %>

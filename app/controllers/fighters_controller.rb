@@ -6,7 +6,8 @@ class FightersController < ApplicationController
     @single_game_origin = characters.find { |origin| origin.id == params[:id] }
     @single_fighter = fighters.find { |fighter| fighter.id == params[:fighter_id] }
 
-    @fighter_variants = FighterFacade.variants(params[:id], params[:fighter_id])
+    fighter_variants = FighterFacade.variants(params[:id], params[:fighter_id])
+    @paginate_fighter_variants = Kaminari.paginate_array(fighter_variants).page(params[:page]).per(4)
     @character = CharacterFacade.origins
   end
 
