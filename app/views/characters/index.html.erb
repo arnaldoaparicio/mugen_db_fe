@@ -6,6 +6,7 @@
         <% @paginate_characters.each do |character| %>
             <p> <%= link_to character.name, "/characters/#{character.id}" %> </p>
         <% end %>
+        <br>
     <%= link_to_prev_page @paginate_characters, 'Previous Page' %>
     <%= link_to_next_page @paginate_characters, 'Next Page' %>
     <% end %>
