@@ -1,10 +1,14 @@
 <center>
     <h2>All characters in <%= @origin.name %></h2>
-    <% @paginate_fighters.each do |fighter| %>
-        <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %> </p>
+    <% if @paginate_fighters.empty? %>
+        This section is empty. something will be here soon.
+    <% else %>
+        <% @paginate_fighters.each do |fighter| %>
+            <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %> </p>
+        <% end %>
+        <%= link_to_prev_page @paginate_fighters, 'Previous Page' %>
+        <%= link_to_next_page @paginate_fighters, 'Next Page' %>
     <% end %>
-    <%= link_to_prev_page @paginate_fighters, 'Previous Page' %>
-    <%= link_to_next_page @paginate_fighters, 'Next Page' %>
     <br>
 
     <% if current_user %>
