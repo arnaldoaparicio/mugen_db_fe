@@ -1,5 +1,10 @@
 class FighterVariantsController < ApplicationController
   def new
+    characters = CharacterFacade.origins
+    fighters = CharacterFacade.fighters(params[:id])
+    
+    @current_origin = characters.find { |origin| origin.id == params[:id] }
+    @current_fighter = fighters.find { |fighter| fighter.id == params[:fighter_id]}
   end
 
   def create
