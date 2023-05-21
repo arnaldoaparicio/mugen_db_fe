@@ -16,6 +16,10 @@ class FightersController < ApplicationController
     redirect_to "/characters/#{params[:character_id]}"
   end
 
-  def new 
+  def new
+    characters = CharacterFacade.origins
+    @game_origin = characters.find { |origin| origin.id == params[:id] }
+    # require 'pry'; binding.pry
   end
 end
+ 
