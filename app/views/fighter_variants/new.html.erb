@@ -1,7 +1,7 @@
 <center>
   <% if current_user && current_user.admin == true %>
 
-    <h2>Submit a new entry</h2>
+    <h2>Submit a new entry for '<%= @current_fighter.name %>' in '<%= @current_origin.name %>'</h2>
 
     <%= form_with url: '/fighter_variants', method: :post, multipart: true, local: true do |f| %>
       <%= f.label :name, 'Name' %>
