@@ -19,7 +19,6 @@ class FightersController < ApplicationController
   def new
     characters = CharacterFacade.origins
     @game_origin = characters.find { |origin| origin.id == params[:id] }
-    # require 'pry'; binding.pry
   end
 end
  
