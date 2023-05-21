@@ -1,7 +1,7 @@
 <center>
     <% if current_user && current_user.admin == true %>
 
-        <h2>Submit a new fighter</h2>
+        <h2>Submit a new fighter for <%= @game_origin.name %></h2>
 
         <%= form_with url: '/fighters', method: :post, local: true do |f| %>
             <%= f.label :name, 'Name' %>
