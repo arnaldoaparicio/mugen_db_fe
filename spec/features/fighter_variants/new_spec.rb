@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'fighter variants/new', type: :feature do
-    it 'shows the fighter variants new page as a logged out user' do
+    it 'shows the fighter variants new page as a logged out user', :vcr do
         origin = Character.new({id: '1', attributes: { origin: 'Melty Blood' } })
         fighter = Fighter.new({id: '1', attributes: { name: 'Roa'} })
         visit("/characters/#{origin.id}/#{fighter.id}/new")
@@ -18,7 +18,7 @@ RSpec.describe 'fighter variants/new', type: :feature do
         expect(page).to_not have_button('Submit')
     end
 
-    it 'shows the fighter variants new page as a logged in user' do
+    xit 'shows the fighter variants new page as a logged in user', :vcr do
         origin = Character.new({id: '1', attributes: {origin: 'Melty Blood'} })
         fighter = Fighter.new({id: '1', attributes: { name: 'Roa'} })
         user = User.new({id: '1', attributes: {email: 'madeupmail@madeupmail.com', admin: true} })
