@@ -2,6 +2,40 @@
 http_interactions:
 - request:
     method: get
+    uri: http://localhost:3000/api/v1/characters/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4df220a4115b428f7a95969c117c0c58"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4bb51497-20e7-4b9d-95f7-a76632951b1a
+      X-Runtime:
+      - '0.009465'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"5","type":"fighters","attributes":{"name":"Cool"}},{"id":"3","type":"fighters","attributes":{"name":"Roche"}}]}'
+  recorded_at: Thu, 25 May 2023 15:42:21 GMT
+- request:
+    method: get
     uri: http://localhost:3000/api/v1/characters
     body:
       encoding: US-ASCII
@@ -25,9 +59,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7d78e0a3-54a9-468d-964c-ef7db91db081
+      - 29cd4474-80f8-459c-85af-4d4540dea319
       X-Runtime:
-      - '0.001892'
+      - '0.001312'
       Transfer-Encoding:
       - chunked
     body:

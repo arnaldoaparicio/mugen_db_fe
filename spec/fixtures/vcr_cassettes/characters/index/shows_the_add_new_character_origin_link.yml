@@ -21,20 +21,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"396b36c1621042a6d36547984e04254f"
+      - W/"fcda01bd3c870a3eb0aad15044026cda"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b747cf43-e3a4-47a7-bfe3-f8edc434d8fc
+      - f42c7166-9188-4748-a52b-43db56ad4cb4
       X-Runtime:
-      - '0.002831'
+      - '0.001685'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"characters","attributes":{"origin":"The
-        Fallen Angel","series_fighters":[{"id":3,"name":"Roche","created_at":"2023-01-16T21:51:20.342Z","updated_at":"2023-01-16T21:51:20.342Z","character_id":1},{"id":5,"name":"Cool","created_at":"2023-03-09T19:50:32.184Z","updated_at":"2023-03-09T19:50:32.184Z","character_id":1}]}},{"id":"2","type":"characters","attributes":{"origin":"Capcom
-        vs. SNK Series","series_fighters":[{"id":1,"name":"Ryu","created_at":"2023-01-16T21:51:20.338Z","updated_at":"2023-01-16T21:51:20.338Z","character_id":2},{"id":2,"name":"Guile","created_at":"2023-01-16T21:51:20.340Z","updated_at":"2023-01-16T21:51:20.340Z","character_id":2},{"id":4,"name":"Kyo","created_at":"2023-01-16T21:51:20.344Z","updated_at":"2023-01-16T21:51:20.344Z","character_id":2}]}},{"id":"3","type":"characters","attributes":{"origin":"The
-        King of Fighters","series_fighters":[]}}]}'
-  recorded_at: Fri, 10 Mar 2023 21:05:05 GMT
+      string: '{"data":[{"id":"2","type":"characters","attributes":{"origin":"Capcom
+        vs. SNK Series"}},{"id":"1","type":"characters","attributes":{"origin":"The
+        Fallen Angel"}},{"id":"3","type":"characters","attributes":{"origin":"The
+        King of Fighters"}}]}'
+  recorded_at: Thu, 25 May 2023 15:42:21 GMT
 recorded_with: VCR 6.1.0

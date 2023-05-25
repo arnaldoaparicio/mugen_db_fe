@@ -1,0 +1,15 @@
+<center>
+  <% if current_user && current_user.admin == true %>
+    <h2>Edit character origin</h2>
+
+    <%= form_with url: "/characters/#{@character_origin.id}/edit", method: :patch, local: true do |f| %>
+      <%= f.label :origin, 'Name of game origin' %>
+      <%= f.text_field :origin %>
+
+      <%= f.submit 'Submit' %>
+    <% end %>
+  <% else %>
+    <h2>You don't have permission to access this page.</h2>
+    <p> <%= link_to 'Return to Home Page', '/' %> </p>
+  <% end %>
+</center>

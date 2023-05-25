@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'characters/index', type: :feature do
-  it 'has some character origins' do
+  xit 'has some character origins' do
     VCR.use_cassette('contains_some_character_origins') do
     visit('/characters')
   

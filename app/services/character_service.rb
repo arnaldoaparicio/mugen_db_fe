@@ -16,6 +16,13 @@ class CharacterService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.edit_single_character(character_id, origin)
+    response = connection.patch("/api/v1/characters/#{character_id}") do |req|
+      req.body = { character: { origin: origin } }
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.connection
     Faraday.new(url: 'https://mugen-db-be.fly.dev')
     # Faraday.new(url: 'http://localhost:3000')

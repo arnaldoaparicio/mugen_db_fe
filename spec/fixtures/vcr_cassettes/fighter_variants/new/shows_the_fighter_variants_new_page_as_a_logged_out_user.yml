@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ab925c9d-7ccb-4f8d-9834-c5de4511faf4
+      - 422104bb-f661-4ca1-90a6-7a135eff92fa
       X-Runtime:
-      - '0.001457'
+      - '0.002760'
       Transfer-Encoding:
       - chunked
     body:
@@ -36,5 +36,39 @@ http_interactions:
         vs. SNK Series"}},{"id":"1","type":"characters","attributes":{"origin":"The
         Fallen Angel"}},{"id":"3","type":"characters","attributes":{"origin":"The
         King of Fighters"}}]}'
+  recorded_at: Thu, 25 May 2023 15:42:22 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/characters/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4df220a4115b428f7a95969c117c0c58"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1ef601eb-f455-4d9b-a3ad-7b5caa1f5d0e
+      X-Runtime:
+      - '0.002782'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"5","type":"fighters","attributes":{"name":"Cool"}},{"id":"3","type":"fighters","attributes":{"name":"Roche"}}]}'
   recorded_at: Thu, 25 May 2023 15:42:22 GMT
 recorded_with: VCR 6.1.0
