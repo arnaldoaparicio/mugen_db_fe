@@ -17,4 +17,9 @@ class CharacterFacade
     character = CharacterService.create_new_character(character)[:data]
     Character.new(character)
   end
+
+  def self.edit_character(character_id, origin)
+    json = CharacterService.edit_single_character(character_id, origin)[:data]
+    Character.new(json)
+  end
 end
