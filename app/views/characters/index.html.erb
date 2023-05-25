@@ -4,7 +4,11 @@
     <% else %>
         <h1>Character Origins</h1>
         <% @paginate_characters.each do |character| %>
-            <p> <%= link_to character.name, "/characters/#{character.id}" %>  <%= button_to 'Edit origin', "/characters/#{character.id}/edit", method: :get %> </p>
+            <p> <%= link_to character.name, "/characters/#{character.id}" %>
+            <% if current_user %>
+             <%= button_to 'Edit origin', "/characters/#{character.id}/edit", method: :get %> 
+            <% end %>
+            </p>
         <% end %>
         <br>
     <%= link_to_prev_page @paginate_characters, 'Previous Page' %>
