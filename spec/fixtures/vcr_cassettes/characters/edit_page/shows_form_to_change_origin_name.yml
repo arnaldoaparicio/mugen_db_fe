@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/characters/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4df220a4115b428f7a95969c117c0c58"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4bb51497-20e7-4b9d-95f7-a76632951b1a
+      X-Runtime:
+      - '0.009465'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"5","type":"fighters","attributes":{"name":"Cool"}},{"id":"3","type":"fighters","attributes":{"name":"Roche"}}]}'
+  recorded_at: Thu, 25 May 2023 15:42:21 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/characters
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fcda01bd3c870a3eb0aad15044026cda"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 29cd4474-80f8-459c-85af-4d4540dea319
+      X-Runtime:
+      - '0.001312'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"characters","attributes":{"origin":"Capcom
+        vs. SNK Series"}},{"id":"1","type":"characters","attributes":{"origin":"The
+        Fallen Angel"}},{"id":"3","type":"characters","attributes":{"origin":"The
+        King of Fighters"}}]}'
+  recorded_at: Thu, 25 May 2023 15:42:21 GMT
+recorded_with: VCR 6.1.0
