@@ -16,4 +16,14 @@ class CharactersController < ApplicationController
     CharacterFacade.create_character(origin: params[:origin])
     redirect_to '/characters'
   end
+
+  def edit
+    characters = CharacterFacade.origins
+    @character_origin = characters.find { |character| character.id == params[:id] }
+  end
+
+  def update
+    CharacterFacade.edit_character(params[:id], params[:origin])
+    redirect_to '/characters'
+  end
 end
