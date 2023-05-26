@@ -11,8 +11,15 @@ class FighterService
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.edit_single_fighter(character_id, fighter_id, new_name)
+    response = connection.patch("/api/v1/characters/#{character_id}/#{fighter_id}") do |req|
+      req.body = { fighter: { name: new_name}}
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.connection
-    Faraday.new(url: 'https://mugen-db-be.fly.dev')
-    # Faraday.new(url: 'http://localhost:3000')
+    # Faraday.new(url: 'https://mugen-db-be.fly.dev')
+    Faraday.new(url: 'http://localhost:3000')
   end
 end
