@@ -19,7 +19,7 @@ class FighterService
   end
 
   def self.connection
-    # Faraday.new(url: 'https://mugen-db-be.fly.dev')
-    Faraday.new(url: 'http://localhost:3000')
+    Faraday.new(url: 'https://mugen-db-be.fly.dev')
+    # Faraday.new(url: 'http://localhost:3000')
   end
 end
