@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   post '/fighter_variants', to: 'fighter_variants#create'
   post '/characters', to: 'characters#create'
   patch '/characters/:id/edit', to: 'characters#update'
+  patch '/characters/:id/:fighter_id', to: 'fighters#update'
   post '/fighters', to: 'fighters#create'
   # get '/register', to: 'users#new'
   # post '/register', to: 'users#create'
