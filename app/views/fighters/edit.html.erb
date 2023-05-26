@@ -1,0 +1,19 @@
+<center>
+    <% if current_user && current_user.admin == true %>
+
+        <h2>Edit details for <%= @fighter.name %> in <%= @origin.name %></h2>
+
+        <%= form_with url: "/characters/#{@origin.id}/#{@fighter.id}", method: :patch, local: true do |f| %>
+            <%= f.label :name, 'Name' %>
+            <%= f.text_field :name %>
+
+            <%= f.hidden_field :character_id %>
+            <%= hidden_field_tag :character_id, "#{@origin.id}" %>
+    
+            <%= f.submit 'Submit' %>
+        <% end %>
+    <% else %>
+        <h2>You don't have permission to access this page.</h2>
+        <p> <%= link_to 'Return to home', '/' %> </p>
+    <% end %>
+</center>
