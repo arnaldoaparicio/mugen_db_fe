@@ -10,4 +10,9 @@ class FighterFacade
     fighter = FighterService.create_new_fighter(data)[:data]
     Fighter.new(fighter)
   end
+
+  def self.edit_fighter(character_id, fighter_id, new_name)
+    json = FighterService.edit_single_fighter(character_id, fighter_id, new_name)[:data]
+    Fighter.new(json)
+  end
 end
