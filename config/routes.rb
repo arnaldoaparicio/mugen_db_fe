@@ -8,11 +8,11 @@ Rails.application.routes.draw do
   get '/characters/:id/new', to: 'fighters#new'
   get '/characters/:id/:fighter_id', to: 'fighters#index'
   get '/characters/:id/:fighter_id/new', to: 'fighter_variants#new'
+  get '/characters/:id/:fighter_id/edit', to: 'fighters#edit'
 
   post '/fighter_variants', to: 'fighter_variants#create'
   post '/characters', to: 'characters#create'
   patch '/characters/:id/edit', to: 'characters#update'
-  patch '/characters/:id/:fighter_id/edit', to: 'fighters#edit'
   post '/fighters', to: 'fighters#create'
   # get '/register', to: 'users#new'
   # post '/register', to: 'users#create'
