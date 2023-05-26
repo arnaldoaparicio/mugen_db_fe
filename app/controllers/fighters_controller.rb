@@ -20,5 +20,13 @@ class FightersController < ApplicationController
     characters = CharacterFacade.origins
     @game_origin = characters.find { |origin| origin.id == params[:id] }
   end
+
+  def edit
+    @origin = Character.find(params[:id])
+    @fighter = Fighter.find(params[:fighter_id])
+  end
+
+  def update
+  end
 end
  
