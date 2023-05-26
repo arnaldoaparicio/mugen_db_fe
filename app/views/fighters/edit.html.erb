@@ -7,8 +7,7 @@
             <%= f.label :name, 'Name' %>
             <%= f.text_field :name %>
 
-            <%= f.hidden_field :character_id %>
-            <%= hidden_field_tag :character_id, "#{@origin.id}" %>
+
     
             <%= f.submit 'Submit' %>
         <% end %>
