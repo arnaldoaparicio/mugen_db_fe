@@ -4,7 +4,7 @@
         This section is empty. something will be here soon.
     <% else %>
         <% @paginate_fighters.each do |fighter| %>
-            <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %> </p>
+            <p> <%= link_to fighter.name, "/characters/#{params[:id]}/#{fighter.id}" %> <%= button_to  'Edit Fighter', "/characters/#{params[:id]}/#{fighter.id}/edit", method: :get %> </p>
         <% end %>
         <%= link_to_prev_page @paginate_fighters, 'Previous Page' %>
         <%= link_to_next_page @paginate_fighters, 'Next Page' %>
