@@ -30,6 +30,8 @@ class FightersController < ApplicationController
   end
 
   def update
+    FighterFacade.edit_fighter(params[:id], params[:fighter_id], params[:name])
+    redirect_to "/characters/#{params[:id]}"
   end
 end
  
