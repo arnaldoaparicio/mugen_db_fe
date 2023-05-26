@@ -22,8 +22,11 @@ class FightersController < ApplicationController
   end
 
   def edit
-    @origin = Character.find(params[:id])
-    @fighter = Fighter.find(params[:fighter_id])
+    fighters = CharacterFacade.fighters(params[:id])
+    characters = CharacterFacade.origins
+
+    @origin = characters.find { |origin| origin.id == params[:id] }
+    @fighter = fighters.find { |fighter| fighter.id == params[:fighter_id] }
   end
 
   def update
