@@ -5,7 +5,7 @@
 
         <%= form_with url: "/characters/#{@origin.id}/#{@fighter.id}", method: :patch, local: true do |f| %>
             <%= f.label :name, 'Name' %>
-            <%= f.text_field :name %>
+            <%= f.text_field :name, value: @fighter.name %>
 
 
     
