@@ -4,7 +4,7 @@
 
     <%= form_with url: "/characters/#{@character_origin.id}/edit", method: :patch, local: true do |f| %>
       <%= f.label :origin, 'Name of game origin' %>
-      <%= f.text_field :origin %>
+      <%= f.text_field :origin, value: @character_origin.name %>
 
       <%= f.submit 'Submit' %>
     <% end %>
