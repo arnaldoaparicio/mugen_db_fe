@@ -11,8 +11,9 @@
             </p>
         <% end %>
         <br>
-    <%= link_to_prev_page @paginate_characters, 'Previous Page' %>
+    <p><%= link_to_prev_page @paginate_characters, 'Previous Page' %>
     <%= link_to_next_page @paginate_characters, 'Next Page' %>
+    </p>
     <% end %>
     <br>
     <% if current_user %>
