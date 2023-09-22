@@ -17,3 +17,8 @@ The purpose of this is to provide a large collection of links for the user to ea
 - Utilize a CI/CD workflow
 
 For more in-depth information regarding challenges and goals, check out this log I created: https://gist.github.com/arnaldoaparicio/c91ffdefd2573c21ba2c3c921760f8e1
+
+## UPDATE 09/22/2023
+- Upgraded Ruby to version 3.2.2 and Rails to version 7.0.5
+- Fixed an issued that cause the images not to show, which would cause the webpage to crash. It seems 'service_url' is deprecated on Rails 7. Swapped it out with 'url' instead. 
+- All changes are now live
