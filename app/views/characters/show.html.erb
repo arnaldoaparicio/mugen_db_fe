@@ -9,6 +9,8 @@
             <%= button_to  'Edit Fighter', "/characters/#{params[:id]}/#{fighter.id}/edit", method: :get %> </p>
             <% end %>
         <% end %>
+        <br>
+        <br>
         <%= link_to_prev_page @paginate_fighters, 'Previous Page' %>
         <%= link_to_next_page @paginate_fighters, 'Next Page' %>
     <% end %>
