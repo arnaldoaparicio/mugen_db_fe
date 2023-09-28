@@ -8,6 +8,7 @@
             <p> Author: <%= variant.author %> </p>
             <p> Website: <%= link_to variant.website, variant.website, target: :blank %> </p>
             <p> Origin: <%= variant.game_name %> </p>
+            <br>
         <% end %>
     <%= link_to_prev_page @paginate_fighter_variants, 'Previous Page' %>
     <%= link_to_next_page @paginate_fighter_variants, 'Next Page' %>
