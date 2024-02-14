@@ -164,7 +164,7 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.3-arm64-darwin)
+    nokogiri (1.16.2-arm64-darwin)
       racc (~> 1.4)
     pg (1.5.4)
     popper_js (2.11.6)
@@ -174,7 +174,7 @@ GEM
     public_suffix (5.0.3)
     puma (6.4.2)
       nio4r (~> 2.0)
-    racc (1.7.1)
+    racc (1.7.3)
     rack (2.2.8)
     rack-test (2.1.0)
       rack (>= 1.3)
@@ -303,6 +303,7 @@ DEPENDENCIES
   kaminari
   launchy
   listen
+  nokogiri (>= 1.16.2)
   pg (>= 0.18, < 2.0)
   pry
   puma (>= 5.6.8)
