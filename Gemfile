@@ -38,6 +38,7 @@ gem 'faraday'
 gem 'faraday-multipart'
 gem "rack", ">= 2.2.6.3"
 gem 'kaminari'
+gem "nokogiri", ">= 1.16.2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
