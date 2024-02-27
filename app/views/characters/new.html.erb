@@ -3,8 +3,11 @@
     <h2>Submit a new entry for origin</h2>
 
     <%= form_with url: '/characters', method: :post, local: true do |f| %>
-      <%= f.label :origin, 'Name of game origin' %>
+      <%= f.label :origin, 'Display origin name' %>
       <%= f.text_field :origin %>
+
+      <%= f.label :origin_tag, "Origin name" %>
+      <%= f.text_field :origin_tag %>
 
       <%= f.submit 'Submit' %>
     <% end %>

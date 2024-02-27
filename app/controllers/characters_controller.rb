@@ -13,7 +13,7 @@ class CharactersController < ApplicationController
   end
 
   def create
-    CharacterFacade.create_character(origin: params[:origin])
+    CharacterFacade.create_character(origin: params[:origin], origin_tag: params[:origin_tag])
     redirect_to '/characters'
   end
 
@@ -23,7 +23,7 @@ class CharactersController < ApplicationController
   end
 
   def update
-    CharacterFacade.edit_character(params[:id], params[:origin])
+    CharacterFacade.edit_character(params[:id], params[:origin], params[:origin_tag])
     redirect_to '/characters'
   end
 end
