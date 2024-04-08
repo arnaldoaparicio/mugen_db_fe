@@ -12,7 +12,7 @@ class FightersController < ApplicationController
   end
 
   def create
-    FighterFacade.create_fighter(name: params[:name], character_id: params[:character_id])
+    FighterFacade.create_fighter(name: params[:name], name_tag: params[:name_tag], character_id: params[:character_id])
     redirect_to "/characters/#{params[:character_id]}"
   end
 
