@@ -3,10 +3,10 @@
     <h2>Edit character origin</h2>
 
     <%= form_with url: "/characters/#{@character_origin.id}/edit", method: :patch, local: true do |f| %>
-      <%= f.label :origin, 'Display origin name' %>
+      <%= f.label :origin, 'Display Origin Name' %>
       <%= f.text_field :origin, value: @character_origin.name %>
 
-      <%= f.label :origin_tag, "Origin name" %>
+      <%= f.label :origin_tag, "Origin tag (e.g. mvc, sf3)" %>
       <%= f.label :origin_tag, value: @character_origin.name_tag %>
 
       <%= f.submit 'Submit' %>
