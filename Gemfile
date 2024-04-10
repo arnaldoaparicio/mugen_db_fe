@@ -36,7 +36,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap'
 gem 'faraday'
 gem 'faraday-multipart'
-gem "rack", ">= 2.2.6.3"
+gem "rack", ">= 2.2.8.1"
 gem 'kaminari'
 gem "nokogiri", ">= 1.16.2"
 
