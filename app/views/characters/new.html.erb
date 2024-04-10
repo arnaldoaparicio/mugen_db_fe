@@ -3,10 +3,10 @@
     <h2>Submit a new entry for origin</h2>
 
     <%= form_with url: '/characters', method: :post, local: true do |f| %>
-      <%= f.label :origin, 'Display origin name' %>
+      <%= f.label :origin, 'Display Origin Name' %>
       <%= f.text_field :origin %>
 
-      <%= f.label :origin_tag, "Origin name" %>
+      <%= f.label :origin_tag, "Origin tag (e.g. mvc, sf3)" %>
       <%= f.text_field :origin_tag %>
 
       <%= f.submit 'Submit' %>
