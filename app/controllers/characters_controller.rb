@@ -9,12 +9,12 @@ class CharactersController < ApplicationController
     @paginate_fighters = Kaminari.paginate_array(fighters).page(params[:page]).per(12)
 
     all_origins = CharacterFacade.origins
-    @origin = all_origins.find {|origin| origin.id == params[:id]}
+    @origin = all_origins.find { |origin| origin.id == params[:id] }
   end
 
   def create
     CharacterFacade.create_character(origin: params[:origin], origin_tag: params[:origin_tag])
-    redirect_to '/characters'
+    redirect_to "/characters"
   end
 
   def edit
@@ -24,6 +24,6 @@ class CharactersController < ApplicationController
 
   def update
     CharacterFacade.edit_character(params[:id], params[:origin], params[:origin_tag])
-    redirect_to '/characters'
+    redirect_to "/characters"
   end
 end
