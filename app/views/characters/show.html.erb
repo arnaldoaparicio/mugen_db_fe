@@ -1,4 +1,4 @@
-<center>
+
     <h2>All characters in <%= @origin.name %></h2>
     <% if @paginate_fighters.empty? %>
         This section is empty. something will be here soon.
@@ -20,4 +20,3 @@
         <%= link_to 'Add a new fighter', "/characters/#{params[:id]}/new" %>
     <% end %>
     <p><%= link_to "Back to Characters page", "/characters" %></p>
-</center>
