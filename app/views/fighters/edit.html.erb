@@ -1,4 +1,4 @@
-<center>
+
     <% if current_user && current_user.admin == true %>
 
         <h2>Edit details for <%= @fighter.name %> in <%= @origin.name %></h2>
@@ -18,4 +18,3 @@
         <h2>You don't have permission to access this page.</h2>
         <p> <%= link_to 'Return to home', '/' %> </p>
     <% end %>
-</center>
