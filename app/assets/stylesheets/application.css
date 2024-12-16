@@ -16,4 +16,34 @@
 
  html {
     text-align: center;
+
+
  }
+
+ div[value="fighter_variant_alignment"] {
+   position: static;
+   left: 50%;
+
+  
+   
+ }
+
+ div[value="l"] {
+   height: 360px;
+   width: 340px;
+   background-color: red;
+   border: 10px solid black;
+   position: static;
+   left: -50%;
+   margin: 10px;
+
+
+}
+
+div[value="padding-attributes"] {
+   text-align: left;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   padding: 4px 4px 4px 4px;
+}
