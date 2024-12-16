@@ -16,28 +16,22 @@
 
  html {
     text-align: center;
-
-
  }
 
  div[value="fighter_variant_alignment"] {
-   position: static;
+   display: inline-block;
    left: 50%;
-
-  
-   
+   padding: 40px 45px 40px 45px;
  }
 
  div[value="l"] {
+   display: inline-block;
    height: 360px;
    width: 340px;
    background-color: red;
    border: 10px solid black;
    position: static;
    left: -50%;
-   margin: 10px;
-
-
 }
 
 div[value="padding-attributes"] {
