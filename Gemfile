@@ -34,6 +34,7 @@ gem "jbuilder", "~> 2.5"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootstrap"
+gem "bootsnap"
 gem "faraday"
 gem "faraday-multipart"
 gem "kaminari"

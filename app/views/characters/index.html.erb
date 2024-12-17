@@ -1,24 +1,21 @@
-<center>
-    <% if @paginate_characters.empty? %>
-        This section is empty. There will be content here soon
-    <% else %>
-        <h1>Character Origins</h1>
-        <% @paginate_characters.each do |character| %>
-            <p> <%= link_to character.name, "/characters/#{character.id}" %>
-            <% if current_user %>
-             <%= button_to 'Edit origin', "/characters/#{character.id}/edit", method: :get %> 
-            <% end %>
-            </p>
-        <% end %>
-        <br>
-    <p><%= link_to_prev_page @paginate_characters, 'Previous Page' %>
-    <%= link_to_next_page @paginate_characters, 'Next Page' %>
+<% if @paginate_characters.empty? %>
+  This section is empty. There will be content here soon
+<% else %>
+  <h1>Character Origins</h1>
+  <% @paginate_characters.each do |character| %>
+    <p> <%= link_to character.name, "/characters/#{character.id}" %>
+      <% if current_user %>
+        <%= button_to 'Edit origin', "/characters/#{character.id}/edit", method: :get %>
+      <% end %>
     </p>
-    <% end %>
-    <br>
-    <% if current_user %>
-        <p> <%= link_to 'Add new origin entry', '/characters/new' %> </p>
-    <% end %>
-
-    <p><%= link_to 'Back to Home Page', '/'%></p>
-</center>
+  <% end %>
+  <br>
+  <p><%= link_to_prev_page @paginate_characters, 'Previous Page' %>
+    <%= link_to_next_page @paginate_characters, 'Next Page' %>
+  </p>
+<% end %>
+<br>
+<% if current_user %>
+  <p> <%= link_to 'Add new origin entry', '/characters/new' %> </p>
+<% end %>
+<p><%= link_to 'Back to Home Page', '/'%></p>

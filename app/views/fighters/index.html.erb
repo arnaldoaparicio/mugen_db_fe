@@ -1,26 +1,25 @@
-<center>
-    <% if @paginate_fighter_variants.empty? %>
-        <p> Hello, this section is empty. Something will be here soon. </p>
-    <% else %>
-        <% @paginate_fighter_variants.each do |variant| %>
-            <p> <img src= <%= url_for(variant.image_url) %> width="320" height="240"  > </p>
-            <p> Name: <%= variant.name %></p>
-            <p> Author: <%= variant.author %> </p>
-            <p> Website: <%= link_to variant.website, variant.website, target: :blank %> </p>
-            <p> Origin: <%= variant.game_name %> </p>
-            <br>
-        <% end %>
-    <%= link_to_prev_page @paginate_fighter_variants, 'Previous Page' %>
-    <%= link_to_next_page @paginate_fighter_variants, 'Next Page' %>
-    <% end %>
-    <br>
-
-
-
-
-    <% if current_user %>
-        <%= link_to 'Add a new entry', "/characters/#{@single_game_origin.id}/#{@single_fighter.id}/new" %>
-    <% end %>
-
-    <p><%= link_to "Back to #{@single_game_origin.name} page", "/characters/#{@single_game_origin.id}/" %></p>
-</center>
+<% if @paginate_fighter_variants.empty? %>
+  <p> Hello, this section is empty. Something will be here soon. </p>
+<% else %>
+  <% @paginate_fighter_variants.each do |variant| %>
+    <div value="fighter_variant_alignment">
+      <div value="l"><img src= <%= url_for(variant.image_url) %> width="320" height="240"  ><br>
+        <div value="padding-attributes">Name: <%= variant.name %><br>
+          Author: <%= variant.author %><br>
+          Website: <%= link_to variant.website, variant.website, target: :blank %><br>
+          Origin: <%= variant.game_name %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <p>
+    <%= link_to_prev_page @paginate_fighter_variants, "Previous Page" %>
+    <%= link_to_next_page @paginate_fighter_variants, "Next Page" %>
+  <% end %>
+</p>
+<br>
+<p>
+  <% if current_user %>
+    <%= link_to "Add a new entry", "/characters/#{@single_game_origin.id}/#{@single_fighter.id}/new" %>
+  <% end %><br />
+  <%= link_to "Back to #{@single_game_origin.name} page", "/characters/#{@single_game_origin.id}/" %></p>
